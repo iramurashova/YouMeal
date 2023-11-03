@@ -1,0 +1,62 @@
+.item {
+  padding: 14px 0 14px 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+    "image heading count"
+    "image weight count"
+    "image price count";
+  justify-content: start;
+  align-items: center;
+  gap: 1px 6px;
+  grid-template-columns: 64px 108px 1fr;
+  border-bottom: 1px solid #f2f2f3;
+
+}
+
+.heading {
+    margin: 0;
+    padding: 0;
+    color: #000;
+font-family: "Nunito", sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 90px;
+}
+.image {
+    width: 64px;
+    grid-area: image;
+}
+.count_container {
+    grid-area: count;
+    gap: 15px;
+    width: 84px;
+    height: 40px;
+    justify-self: end;
+  }
+ 
+.price {
+  grid-area: price;
+  margin: 0;
+  padding: 5px 0 0 0;
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.weight {
+  grid-area: weight;
+  margin: 0;
+  padding: 0;
+  color: #b1b1b1;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+

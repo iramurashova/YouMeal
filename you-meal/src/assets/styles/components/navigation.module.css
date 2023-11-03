@@ -1,0 +1,54 @@
+.menu {
+    padding: 103px 0 0 75px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+
+  @media screen and (max-width: 1250px) {
+    .menu {
+      padding-left: 32px;
+      overflow-x: scroll;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu{
+      padding: 34px 0 0 64px;
+     
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .menu {
+      padding: 60px 0 0 10px;
+    }
+  }
+
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    font-size: 0;
+    gap: 24px;
+  }
+  .menu::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  .menu::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu__list {
+      gap: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .menu__list {
+      gap: 8px;
+    }
+  }

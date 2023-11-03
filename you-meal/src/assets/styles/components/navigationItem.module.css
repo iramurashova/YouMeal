@@ -1,0 +1,36 @@
+.link {
+    display: grid;
+    grid-template-columns: 24px minmax(min-content, max-content);
+    grid-template-rows: 24px;
+    padding: 8px 14px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    background: #fff;
+    color: #000;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    border: 1px solid #f86310;
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .link {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 4px 8px;
+    }
+  }
+  
+  .link_active {
+    background: #ffab08;
+  }

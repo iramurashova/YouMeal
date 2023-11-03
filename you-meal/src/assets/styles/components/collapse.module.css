@@ -1,0 +1,25 @@
+.collapse {
+    color: #b1b1b1;
+    text-align: right;
+    font-family: "Nunito", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  @media screen and (max-width: 870px) {
+    .collapse {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      bottom: 21px;
+      right: 10px;
+    }
+  }
+  
