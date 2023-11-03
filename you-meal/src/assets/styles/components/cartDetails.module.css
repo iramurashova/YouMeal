@@ -1,3 +1,6 @@
+.full_container{
+    display: none;
+}
 @media screen and (max-width: 870px) {
     .full_container {
       background: #fff;
