@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "../assets/styles/components/navigation.module.css";
 import { navigationData } from "../assets/data/navigationData";
 import NavigationItem from "./NavigationItem";
 function Navigation() {
+  const [isActive, setIsActive] = useState(null)
+
   return (
-    <nav className={styles["menu"]}>
-      <ul className={styles["menu__list"]}>
-       { navigationData.map((item) => <NavigationItem key = {item.name} item={item} />)}
+    <nav className={styles.menu}>
+      <ul className={styles.list}>
+       { navigationData.map((item) => <NavigationItem key = {item.name} item={item} isActive={isActive} setIsActive={setIsActive}/>)}
       </ul>
     </nav>
   );

@@ -1,0 +1,21 @@
+.form__way {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .form__way {
+      gap: 8px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form__way {
+      padding: 8px 0;
+    }
+}

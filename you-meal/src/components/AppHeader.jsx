@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./Navigation";
 import styles from "../assets/styles/components/appHeader.module.css";
-import images from '../assets/images/Images'
+import images from "../assets/images/Images";
 
 function AppHeader() {
   return (
@@ -19,11 +19,19 @@ function AppHeader() {
         />
       </figure>
       <div className={styles["header__container"]}>
-        <h1 className={styles["header__title"]}>Только самые сочные бургеры!</h1>
-        <p className={styles["header__subtitle"]}>Бесплатная доставка от 599₽</p>
+        <h1 className={styles["header__title"]}>
+          Только самые сочные бургеры!
+        </h1>
+        <p className={styles["header__subtitle"]}>
+          Бесплатная доставка от 599₽
+        </p>
 
-          <img className={styles["header__image"]} src = {images.burgerSmall} srcSet={`${images.burgerBig} 800w`} alt="Бургер иконка" />
-
+        <img
+          className={styles["header__image"]}
+          src={images.burgerSmall}
+          srcSet={`${images.burgerBig} 800w`}
+          alt="Бургер иконка"
+        />
       </div>
       <Navigation />
     </header>

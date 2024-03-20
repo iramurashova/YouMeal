@@ -15,6 +15,7 @@ const IMAGES = {
     sauses: new URL("./icon-ketchup.svg", import.meta.url).href,
   },
   cartIcon: new URL('./icon-delivery.svg', import.meta.url).href,
+  delivery: new URL('./donat.svg', import.meta.url).href,
   footerLogo: new URL("./footer__logo.svg", import.meta.url).href,
   footerIcon: new URL("./footer__icon-kitchen.svg", import.meta.url).href,
   numberIcon: new URL("./icon-call.svg", import.meta.url).href,

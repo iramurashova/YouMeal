@@ -8,7 +8,7 @@ import { selectModalOpen, selectTypeOfModal } from "../services/modalReducer/sel
 import Modal from "./Modal";
 import { removeItemData } from "../services/dataReducer/dataReducer";
 import { closeModal } from "../services/modalReducer/modalReducer";
-function Cards({ onOpen }) {
+function Cards() {
   const isOpen = useSelector(selectModalOpen);
   const typeOfModal = useSelector(selectTypeOfModal);
   const dispatch = useDispatch();
@@ -19,34 +19,34 @@ function Cards({ onOpen }) {
   return (
     <>
       <article className={styles["cards"]}>
-        <h2 className={styles["heading"]}>Бургеры</h2>
+        <h2 className={styles["heading"]} id="burgers">Бургеры</h2>
         <ul className={styles["list"]}>
           {foodData.map(
             (item) =>
               item.type === "burgers" && (
-                <Card key={item._id} item={item} onOpen={onOpen} />
+                <Card key={item._id} item={item} />
               )
           )}
         </ul>
       </article>
       <article className={styles["cards"]}>
-        <h2 className={styles["heading"]}>Закуски</h2>
+        <h2 className={styles["heading"]} id="appetizer">Закуски</h2>
         <ul className={styles["list"]}>
           {foodData.map(
             (item) =>
               item.type === "apetizer" && (
-                <Card key={item._id} item={item} onOpen={onOpen} />
+                <Card key={item._id} item={item}  />
               )
           )}
         </ul>
       </article>
       <article className={styles["cards"]}>
-        <h2 className={styles["heading"]}>Хот-доги</h2>
+        <h2 className={styles["heading"]} id="hotdogs">Хот-доги</h2>
         <ul className={styles["list"]}>
           {foodData.map(
             (item) =>
               item.type === "hotdogs" && (
-                <Card key={item._id} item={item} onOpen={onOpen} />
+                <Card key={item._id} item={item} />
               )
           )}
         </ul>

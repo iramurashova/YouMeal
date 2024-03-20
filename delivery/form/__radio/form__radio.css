@@ -1,0 +1,15 @@
+.form__radio {
+    position: absolute;
+    width: 1px; 
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    
+}
+
+.form__radio:checked + .form__pseudo-item {
+    background: url(../../../images/radio_checked.svg);
+    width: 12px;
+    height: 12px;
+}
+

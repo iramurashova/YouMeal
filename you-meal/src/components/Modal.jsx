@@ -15,8 +15,8 @@ function Modal({onClose, children}) {
       }, []);
   return createPortal(
     <>
-     <div className={styles["container"]}>
-           <button className={styles["close"]}>
+     <div className={styles.container}>
+           <button className={styles.close}>
           <img
             className={styles["close_image"]}
             src={IMAGES.modalClose}
