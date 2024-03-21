@@ -3,19 +3,21 @@ import { foodData } from "../assets/data/foodData";
 import styles from "../assets/styles/components/cards.module.css";
 import Card from "./Card";
 import CardDetails from "./CardDetails";
+import Modal from "./Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { selectModalOpen, selectTypeOfModal } from "../services/modalReducer/selector";
-import Modal from "./Modal";
-import { removeItemData } from "../services/dataReducer/dataReducer";
-import { closeModal } from "../services/modalReducer/modalReducer";
+import { closeModal, openModal } from "../services/modalReducer/modalReducer";
+import { getItemData, removeItemData } from "../services/dataReducer/dataReducer";
 function Cards() {
+  const dispatch = useDispatch();
   const isOpen = useSelector(selectModalOpen);
   const typeOfModal = useSelector(selectTypeOfModal);
-  const dispatch = useDispatch();
   const onClose = () => {
     dispatch(closeModal());
     dispatch(removeItemData());
   };
+
+ 
   return (
     <>
       <article className={styles["cards"]}>

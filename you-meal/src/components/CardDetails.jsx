@@ -3,9 +3,11 @@ import { useSelector } from "react-redux";
 import styles from "../assets/styles/components/cardDetails.module.css";
 import Button from "./Button";
 import Count from "./Count";
+import AddProductButton from "./AddProductButton";
+import { selectItem } from "../services/dataReducer/selector";
 
 function CardDetails() {
-  const item = useSelector((store) => store.item.item);
+  const item = useSelector(selectItem)
   return (
     <div className={styles.product}>
       <img src={item.link} alt={item.name} className={styles.image} />
@@ -13,11 +15,11 @@ function CardDetails() {
       <h2 className={styles.title}>{item.name}</h2>
       <p className={styles.price}>{`${item.price}₽`}</p>
       <div className={styles.button}>
-        <Button text="Добавить" />
+      <AddProductButton item={item}/>
       </div>
 
       <div className={styles.count_container}>
-        <Count />
+        <Count item={item}/>
       </div>
 
       <p className={styles.description}>{item.description}</p>

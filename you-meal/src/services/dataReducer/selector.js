@@ -1,0 +1,1 @@
+export const selectItem= (store) => store.item.item;

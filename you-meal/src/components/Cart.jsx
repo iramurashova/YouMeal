@@ -30,7 +30,6 @@ const dispatch = useDispatch();
     setIsOpen(!isOpen);
   };
   const handleClick = () => {
-    console.log("open");
     dispatch(openModal("delivery"));
   }
   const handleClose = () => {
@@ -48,7 +47,7 @@ const dispatch = useDispatch();
           {!isEmpty && (
             <>
               <ul className={styles.list}>
-               {cartList.map(item => <CartItem key={item.name} item={item}/>)} 
+               {cartList.map(item => <CartItem key={item._id} item={item}/>)} 
               </ul>
               <div className={styles["summary"]}>
                 <p className={styles["summary_heading"]}>Итого</p>

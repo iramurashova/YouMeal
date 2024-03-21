@@ -12,8 +12,12 @@ import {
 import { closeModal, openModal } from "../services/modalReducer/modalReducer";
 import Modal from "./Modal";
 import Delivery from "./Delivery";
+import { selectCartList, selectCounter } from "../services/cartReducer/selector";
 
 function CartDetails({ isEmpty, onClose }) {
+  const cartList = useSelector(selectCartList);
+  const counter = useSelector(selectCounter);
+  const total = cartList.reduce((acc, el) => acc + el.price * el.count, 0);
   const formIsOpen = useSelector(selectModalOpen);
   const typeOfModal = useSelector(selectTypeOfModal);
   const dispatch = useDispatch();
@@ -29,7 +33,7 @@ function CartDetails({ isEmpty, onClose }) {
     <>
       <div className={styles["full_container"]}>
         <h2 className={styles.heading}>Корзина</h2>
-        <div className={styles.count}>0</div>
+        <div className={styles.count}>{counter}</div>
 
         {isEmpty && (
           <p className={styles["full_cart_empty"]}>Тут пока пусто :(</p>
@@ -38,12 +42,12 @@ function CartDetails({ isEmpty, onClose }) {
         <Collapse onClose={onClose} />
         {!isEmpty && (
           <>
-            <ul className={styles["list"]}>
-              <CartItem />
-            </ul>
+            <ul className={styles.list}>
+               {cartList.map(item => <CartItem key={item._id} item={item}/>)} 
+              </ul>
             <div className={styles["summary"]}>
               <p className={styles["summary_heading"]}>Итого</p>
-              <p className={styles["summary_count"]}>550₽</p>
+              <p className={styles["summary_count"]}>{total}₽</p>
             </div>
             <Button type="button" text="Оформить заказ" onClick={handleClick} />
             <div className={styles["footer"]}>

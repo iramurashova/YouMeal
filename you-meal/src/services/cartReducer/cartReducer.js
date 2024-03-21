@@ -9,16 +9,12 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addItem: (state, action) => {
+    editCartList: (state, action) => {
       state.counter = action.payload.length;
       state.list = action.payload;
-    },
-    removeItem: (state, action) => {
-      state.counter = action.payload.length;
-      state.list = action.payload;
-    },
+    }
   },
 });
 
 export const cartReducer = cartSlice.reducer;
-export const { addItem, removeItem } = cartSlice.actions;
+export const { editCartList } = cartSlice.actions;
