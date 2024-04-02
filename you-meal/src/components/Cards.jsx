@@ -20,9 +20,9 @@ function Cards() {
  
   return (
     <>
-      <article className={styles["cards"]}>
-        <h2 className={styles["heading"]} id="burgers">Бургеры</h2>
-        <ul className={styles["list"]}>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="burgers">Бургеры</h2>
+        <ul className={styles.list}>
           {foodData.map(
             (item) =>
               item.type === "burgers" && (
@@ -31,9 +31,9 @@ function Cards() {
           )}
         </ul>
       </article>
-      <article className={styles["cards"]}>
-        <h2 className={styles["heading"]} id="appetizer">Закуски</h2>
-        <ul className={styles["list"]}>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="appetizer">Закуски</h2>
+        <ul className={styles.list}>
           {foodData.map(
             (item) =>
               item.type === "apetizer" && (
@@ -42,9 +42,9 @@ function Cards() {
           )}
         </ul>
       </article>
-      <article className={styles["cards"]}>
-        <h2 className={styles["heading"]} id="hotdogs">Хот-доги</h2>
-        <ul className={styles["list"]}>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="hotdogs">Хот-доги</h2>
+        <ul className={styles.list}>
           {foodData.map(
             (item) =>
               item.type === "hotdogs" && (
