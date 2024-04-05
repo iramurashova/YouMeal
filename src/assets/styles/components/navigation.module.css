@@ -1,0 +1,56 @@
+.menu {
+    padding: 40px 0 50px 75px;
+    box-sizing: border-box;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+  
+
+  @media screen and (max-width: 1250px) {
+    .menu {
+      padding-left: 32px;
+      overflow-x: scroll;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu{
+      padding: 30px 0 30px 64px;
+     
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .menu {
+      padding: 30px 0 30px 10px;
+    }
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    font-size: 0;
+    gap: 24px;
+  }
+  .menu::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  .menu::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu__list {
+      gap: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .menu__list {
+      gap: 8px;
+    }
+  }

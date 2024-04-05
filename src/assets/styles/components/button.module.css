@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 11px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #ff7020;
+  border-style: none;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1; /* 16px */
+}
+
+.button:hover {
+  background: #ffab08;
+  color: #fff;
+}
+.button:focus {
+  background: #f86310;
+  color: #fff;
+  outline: none;
+}
+.button:active {
+  background: #f86310;
+  color: #fff;
+}
+.button:disabled {
+background: #F9F9F9;
+color: #ACACAC;
+}
+@media screen and (max-width: 1023px) {
+  .button {
+    height: 30px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+.secondary {
+  background: #f2f2f3;
+  color: #000000;
+}

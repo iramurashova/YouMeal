@@ -1,0 +1,50 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+   
+}
+.heading {
+    margin: 0;
+    color: #000;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.2; /* 48px */
+}
+
+@media screen and (max-width: 768px){
+    .heading{
+        font-size: 28px;
+    }
+}
+.list {
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    list-style: none;
+    margin: 0;
+    padding: 24px 0 0 0;
+    gap: 30px;
+
+}
+
+@media screen and (max-width: 1023px) {
+    .list {
+        grid-template-columns: repeat(auto-fit, 145px); 
+      gap: 20px;
+      padding-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .list {
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width: 584px) {
+    .list {
+      justify-content: center;
+    }
+  }

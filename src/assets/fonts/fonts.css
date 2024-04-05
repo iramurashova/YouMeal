@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Nunito-Regular.woff2) format("woff2"),
+    url(./Nunito-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url(./Nunito-SemiBold.woff2) format("woff2"),
+    url(./Nunito-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  src: url(./Nunito-ExtraBold.woff2) format("woff2"),
+    url(./Nunito-ExtraBold.woff) format("woff");
+}
