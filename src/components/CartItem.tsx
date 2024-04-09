@@ -7,7 +7,7 @@ type TCartItemProps = {
 };
 function CartItem({ item }: TCartItemProps) {
   return item && item.count !== 0 ? (
-    <div className={styles.item}>
+    <li className={styles.item}>
       <h3 className={styles.heading}>{item.name}</h3>
       <img className={styles.image} src={item.link} alt={item.name} />
       <p className={styles.price}>{item.price}₽</p>
@@ -15,7 +15,7 @@ function CartItem({ item }: TCartItemProps) {
       <div className={styles.count_container}>
         <Count item={item} />
       </div>
-    </div>
+    </li>
   ) : null;
 }
 

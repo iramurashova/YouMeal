@@ -5,7 +5,6 @@ import { openModal } from "../services/modalReducer/modalReducer";
 import AddProductButton from "./AddProductButton";
 import { TItem } from "../utils/types";
 import { useAppDispatch } from "../services/types";
-import IMAGES from "../assets/images/Images";
 type TCardProps = {
   item: TItem;
 };

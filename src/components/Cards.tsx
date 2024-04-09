@@ -11,13 +11,20 @@ import {
 import { closeModal } from "../services/modalReducer/modalReducer";
 import { removeItemData } from "../services/dataReducer/dataReducer";
 import { useAppDispatch, useAppSelector } from "../services/types";
+import EmptyCard from "./EmptyCard";
+import { editCartList } from "../services/cartReducer/cartReducer";
+import Order from "./Order";
 function Cards() {
   const dispatch = useAppDispatch();
   const isOpen = useAppSelector(selectModalOpen);
   const typeOfModal = useAppSelector(selectTypeOfModal);
-  const onClose = () => {
+  const onCloseDetails = () => {
     dispatch(closeModal());
     dispatch(removeItemData());
+  };
+  const onCloseOrder = () => {
+    dispatch(editCartList([]));
+    dispatch(closeModal());
   };
 
   return (
@@ -64,11 +71,65 @@ function Cards() {
             (item) =>
               item.type === "combo" && <Card key={item._id} item={item} />
           )}
+          {!foodData.some((item) => item.type === "combo") && <EmptyCard />}
+        </ul>
+      </article>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="burrito">
+          Шаурма
+        </h2>
+        <ul className={styles.list}>
+          {foodData.map(
+            (item) =>
+              item.type === "burrito" && <Card key={item._id} item={item} />
+          )}
+          {!foodData.some((item) => item.type === "burrito") && <EmptyCard />}
+        </ul>
+      </article>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="pizza">
+          Пицца
+        </h2>
+        <ul className={styles.list}>
+          {foodData.map(
+            (item) =>
+              item.type === "pizza" && <Card key={item._id} item={item} />
+          )}
+          {!foodData.some((item) => item.type === "pizza") && <EmptyCard />}
+        </ul>
+      </article>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="desserts">
+          Десерты
+        </h2>
+        <ul className={styles.list}>
+          {foodData.map(
+            (item) =>
+              item.type === "desserts" && <Card key={item._id} item={item} />
+          )}
+          {!foodData.some((item) => item.type === "desserts") && <EmptyCard />}
+        </ul>
+      </article>
+      <article className={styles.cards}>
+        <h2 className={styles.heading} id="sauses">
+          Соусы
+        </h2>
+        <ul className={styles.list}>
+          {foodData.map(
+            (item) =>
+              item.type === "sauses" && <Card key={item._id} item={item} />
+          )}
+          {!foodData.some((item) => item.type === "sauses") && <EmptyCard />}
         </ul>
       </article>
       {isOpen && typeOfModal === "item" && (
-        <Modal onClose={onClose}>
+        <Modal onClose={onCloseDetails}>
           <CardDetails />
+        </Modal>
+      )}
+      {typeOfModal === "order" && isOpen && (
+        <Modal onClose={onCloseOrder}>
+          <Order />
         </Modal>
       )}
     </>

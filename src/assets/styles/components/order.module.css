@@ -1,0 +1,77 @@
+.order {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.order_list {
+padding: 20px 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+  height: 300px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px){
+    .order_list {
+        flex-wrap: nowrap;
+    }
+
+}
+.title {
+  color: #000;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1; /* 24px */
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 16px;
+    padding-top: 4px;
+  }
+}
+.summary {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  padding: 0 0 24px 0;
+}
+.summary_heading {
+  margin: 0;
+  padding: 0;
+  color:  #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+.summary_count {
+  margin: 0;
+  padding: 0;
+  color:  #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+.way_container {
+    margin: 0;
+font-size: 14px;
+}
+.way {
+
+color:  #f86310;
+text-decoration: none;
+font-weight: 600;
+}
+.adress {
+    margin: 0;
+    font-size: 14px;
+}

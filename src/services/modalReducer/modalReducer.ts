@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 type TinitialState = {
   isOpen: boolean;
-  typeOfModal: "delivery" | "item" | null;
+  typeOfModal: "delivery" | "item" | "order" | null;
 };
 
 const initialState: TinitialState = {

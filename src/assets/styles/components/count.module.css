@@ -43,6 +43,7 @@
 }
 .change {
   border: none;
+  background-color: transparent;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-style: normal;
